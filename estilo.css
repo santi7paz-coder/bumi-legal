@@ -1,0 +1,61 @@
+/* Bumi — páginas legales. Paleta de la marca (Petróleo + Lima, interior bosque). Ni negro ni blanco. */
+:root {
+  --fondo: #F3EAD8;
+  --tarjeta: #F8F1E3;
+  --texto: #12383C;
+  --secundario: #2A5A5C;
+  --acento: #2A7376;
+  --linea: #DCCFB6;
+  --sello: #CDE873;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #08252A;
+    --tarjeta: #0E2F33;
+    --texto: #F3EAD8;
+    --secundario: #B9CFC8;
+    --acento: #CDE873;
+    --linea: #1F4A4E;
+    --sello: #CDE873;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fondo: #08252A;
+  --tarjeta: #0E2F33;
+  --texto: #F3EAD8;
+  --secundario: #B9CFC8;
+  --acento: #CDE873;
+  --linea: #1F4A4E;
+  --sello: #CDE873;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+main { max-width: 680px; margin: 0 auto; padding: 24px 16px 64px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.marca { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; color: var(--texto); text-decoration: none; }
+.marca img { width: 36px; height: 36px; border-radius: 9px; }
+nav.idiomas { display: flex; gap: 4px; }
+nav.idiomas a { padding: 6px 10px; border-radius: 999px; color: var(--secundario); text-decoration: none; font-size: 15px; font-weight: 500; }
+nav.idiomas a[aria-current="true"] { background: var(--sello); color: #12383C; font-weight: 700; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; }
+.vigencia { color: var(--secundario); font-size: 15px; margin: 0 0 28px; }
+h2 { font-size: 20px; margin: 36px 0 8px; }
+p, li { color: var(--texto); }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+a { color: var(--acento); }
+.resumen { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: 16px; padding: 4px 20px; }
+.lista-paginas { list-style: none; padding: 0; }
+.lista-paginas li { margin: 10px 0; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--linea); color: var(--secundario); font-size: 15px; }
